@@ -10,7 +10,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/iov-one/countdown/cmd/countdown/client"
+	"github.com/ng2dev/countdown/cmd/countdown/client"
 	"github.com/iov-one/weave/crypto"
 	"github.com/iov-one/weave/x/sigs"
 )

@@ -7,7 +7,7 @@ import (
 	"testing"
 
 	"bitbucket.org/swoldt/pkg/xerrors/iferr"
-	countdown "github.com/iov-one/countdown/cmd/countdown/app"
+	countdown "github.com/ng2dev/countdown/cmd/countdown/app"
 	"github.com/iov-one/weave"
 	weaveClient "github.com/iov-one/weave/client"
 	"github.com/iov-one/weave/coin"

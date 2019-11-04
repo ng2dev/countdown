@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"io"
 
-	"github.com/iov-one/countdown/cmd/countdown/client"
+	"github.com/ng2dev/countdown/cmd/countdown/client"
 	"github.com/iov-one/weave"
 	"github.com/iov-one/weave/x/batch"
 )

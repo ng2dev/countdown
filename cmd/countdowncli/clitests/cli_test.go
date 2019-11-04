@@ -79,7 +79,7 @@ func ensureCountdownCLIBinary(t testing.TB) {
 You can install countdowncli binary by running "make install" in
 weave main directory or by directly using Go install command:
 
-  $ go install github.com/iov-one/countdown/cmd/countdowncli
+  $ go install github.com/ng2dev/countdown/cmd/countdowncli
 `)
 	}
 }

@@ -10,7 +10,7 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	countdown "github.com/iov-one/countdown/cmd/countdown/app"
+	countdown "github.com/ng2dev/countdown/cmd/countdown/app"
 	"github.com/iov-one/weave"
 	"github.com/iov-one/weave/app"
 	"github.com/iov-one/weave/coin"

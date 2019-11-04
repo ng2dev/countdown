@@ -34,7 +34,7 @@ test:
 
 lint:
 	@go mod vendor
-	docker run --rm -it -v $(shell pwd):/go/src/github.com/iov-one/countdown -w="/go/src/github.com/iov-one/countdown" golangci/golangci-lint:v1.17.1 golangci-lint run ./...
+	docker run --rm -it -v $(shell pwd):/go/src/github.com/ng2dev/countdown -w="/go/src/github.com/ng2dev/countdown" golangci/golangci-lint:v1.17.1 golangci-lint run ./...
 	@rm -rf vendor
 
 # Test fast
@@ -50,14 +50,14 @@ mod:
 
 cover:
 	@go test -mod=readonly -covermode=$(MODE) \
-		-coverpkg=github.com/iov-one/countdown/cmd/countdown/app, \
+		-coverpkg=github.com/ng2dev/countdown/cmd/countdown/app, \
 		-coverprofile=coverage/countdownd_app.out \
-		github.com/iov-one/countdown/cmd/countdown/app
+		github.com/ng2dev/countdown/cmd/countdown/app
 		cat coverage/*.out > coverage/coverage.txt
 	@go test -mod=readonly -covermode=$(MODE) \
-		-coverpkg=github.com/iov-one/countdown/cmd/countdown/app,github.com/iov-one/countdown/cmd/countdown/client \
+		-coverpkg=github.com/ng2dev/countdown/cmd/countdown/app,github.com/ng2dev/countdown/cmd/countdown/client \
 		-coverprofile=coverage/countdownd_client.out \
-		github.com/iov-one/countdown/cmd/countdown/client
+		github.com/ng2dev/countdown/cmd/countdown/client
 
 novendor:
 	@rm -rf ./vendor

@@ -7,7 +7,7 @@ import (
 	fmt "fmt"
 	_ "github.com/gogo/protobuf/gogoproto"
 	proto "github.com/gogo/protobuf/proto"
-	countdown "github.com/iov-one/countdown/x/countdown"
+	countdown "github.com/ng2dev/countdown/x/countdown"
 	github_com_iov_one_weave "github.com/iov-one/weave"
 	migration "github.com/iov-one/weave/migration"
 	cash "github.com/iov-one/weave/x/cash"

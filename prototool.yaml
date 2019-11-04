@@ -17,7 +17,7 @@ excludes:
 
 generate:
   go_options:
-    import_path: github.com/iov-one/countdown
+    import_path: github.com/ng2dev/countdown
 
   plugins:
     - name: gogofaster

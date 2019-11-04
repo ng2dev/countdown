@@ -6,8 +6,8 @@ import (
 	"os"
 	"path/filepath"
 
-	. "github.com/iov-one/countdown"
-	countdown "github.com/iov-one/countdown/cmd/countdown/app"
+	. "github.com/ng2dev/countdown"
+	countdown "github.com/ng2dev/countdown/cmd/countdown/app"
 	"github.com/iov-one/weave/commands"
 	"github.com/iov-one/weave/commands/server"
 	"github.com/tendermint/tendermint/libs/log"
