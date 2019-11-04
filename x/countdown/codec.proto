@@ -1,0 +1,63 @@
+syntax = "proto3";
+
+package countdown;
+
+import "codec.proto";
+import "gogoproto/gogo.proto";
+
+// ---------- STATE -----------
+
+message Countdown {
+  weave.Metadata metadata = 1;
+  // ID is the countdown's identifier
+  bytes id = 2 [(gogoproto.customname) = "ID"];
+  // Owner is the owner address of the countdown
+  bytes owner = 4 [(gogoproto.casttype) = "github.com/iov-one/weave.Address"];
+  // Title is title of the countdown
+  string title = 5;
+  // Lyrics of the title
+  bytes lyrics = 6;
+  // Lyrics of the countdown
+  bytes countdown = 7;
+  // CreatedAt defines creation time of the countdown
+  int64 created_at = 8 [(gogoproto.casttype) = "github.com/iov-one/weave.UnixTime"];
+  // CompletedAt defines completion time of the countdown
+  int64 completed_at = 9 [(gogoproto.casttype) = "github.com/iov-one/weave.UnixTime"];
+  // DeleteAt defines deletion time of the countdown.
+  // Could be nil if no time of deletion is given
+  int64 delete_at = 10 [(gogoproto.casttype) = "github.com/iov-one/weave.UnixTime"];
+}
+
+// ---------- TASKS -----------
+
+// CountdownTask is used for representing scheduled task id. Used when adding a new line of lyrics to a countdown
+message CountdownTask {
+  weave.Metadata metadata = 1;
+  // ID is the unique identifier of the task
+  bytes id = 2 [(gogoproto.customname) = "ID"];
+  // CountdownID is the unique identifier of the task
+  bytes countdown_id = 3 [(gogoproto.customname) = "CountdownID"];
+  // TaskOwner is the creator of the task
+  bytes task_owner = 4 [(gogoproto.casttype) = "github.com/iov-one/weave.Address"];
+}
+
+// ---------- MESSAGES -----------
+
+message CreateUserMsg {
+  weave.Metadata metadata = 1;
+  string username = 2;
+}
+
+message CreateCountdownMsg {
+  weave.Metadata metadata = 1;
+  string title = 2;
+  // lyrics of the countdown
+  bytes lyrics = 3 [(gogoproto.customname) = "Lyrics"];
+}
+
+// DeleteCountdownMsg message deletes a countdown
+message DeleteCountdownMsg {
+  weave.Metadata metadata = 1;
+  // ID is the unique identifier of the task
+  bytes id = 2 [(gogoproto.customname) = "ID"];
+}

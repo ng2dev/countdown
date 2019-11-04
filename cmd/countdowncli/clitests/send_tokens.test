@@ -1,0 +1,9 @@
+#!/bin/sh
+
+set -e
+
+countdowncli send-tokens \
+	-src "seq:test/countdown/1" \
+	-dst "seq:test/countdown/2" \
+	-amount "4 COUNTDOWN" \
+	-memo "countdowncli test" | countdowncli view

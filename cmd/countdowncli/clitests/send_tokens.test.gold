@@ -1,0 +1,16 @@
+{
+	"Sum": {
+		"CashSendMsg": {
+			"metadata": {
+				"schema": 1
+			},
+			"source": "F4AD917A21B58D2882ED39535716226123F92123",
+			"destination": "9DBF3BBC99108AD89EFA72C783785F3A832592BE",
+			"amount": {
+				"whole": 4,
+				"ticker": "COUNTDOWN"
+			},
+			"memo": "countdowncli test"
+		}
+	}
+}

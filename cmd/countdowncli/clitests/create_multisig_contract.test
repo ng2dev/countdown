@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+set -o pipefail
+
+countdowncli multisig -activation 4 -admin 8 |
+	countdowncli with-multisig-participant -weight 2 -sig "seq:foo/bar/1" |
+	countdowncli with-multisig-participant -weight 3 -sig "seq:foo/bar/2" |
+	countdowncli with-multisig-participant -weight 5 -sig "seq:foo/bar/3" |
+	countdowncli with-multisig-participant -weight 6 -sig "seq:foo/bar/4" |
+	countdowncli view

@@ -1,0 +1,8 @@
+#!/bin/sh
+
+set -e
+
+countdowncli multisig -activation 4 -admin 8 |
+	countdowncli with-multisig 1 2 |
+	countdowncli with-multisig 3 |
+	countdowncli view

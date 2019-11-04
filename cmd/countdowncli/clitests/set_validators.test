@@ -1,0 +1,16 @@
+#!/bin/sh
+
+set -e
+
+# set-validators can be used to create a new transaction with a single set
+# operation.
+countdowncli set-validators -pubkey j4JRVstX -power 1 | countdowncli view
+
+echo
+
+# set-validators can be used to modify a transaction and combine validator set
+# operations into a single transaction.
+countdowncli set-validators -pubkey j4JRVstX -power 1 |
+	countdowncli set-validators -pubkey j4JRVstX -power 2 |
+	countdowncli set-validators -pubkey j4JRVstX -power 3 |
+	countdowncli view

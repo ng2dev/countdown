@@ -1,0 +1,24 @@
+#!/bin/sh
+
+set -e
+
+countdowncli from-sequence 0000000000000001
+countdowncli from-sequence 0000000000000033
+countdowncli from-sequence 0000000000000065
+countdowncli from-sequence 0000000000000097
+countdowncli from-sequence 00000000000000c9
+countdowncli from-sequence 00000000000000fb
+countdowncli from-sequence 000000000000012d
+countdowncli from-sequence 000000000000015f
+countdowncli from-sequence 0000000000000191
+countdowncli from-sequence 00000000000001c3
+countdowncli from-sequence 00000000000001f5
+countdowncli from-sequence 0000000000000227
+countdowncli from-sequence 0000000000000259
+countdowncli from-sequence 000000000000028b
+countdowncli from-sequence 00000000000002bd
+countdowncli from-sequence 00000000000002ef
+countdowncli from-sequence 0000000000000321
+
+# Multiple sequences input is allowed as well.
+countdowncli from-sequence 0000000000000353 0000000000000385 00000000000003b7
